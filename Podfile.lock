@@ -1,0 +1,24 @@
+PODS:
+  - BmobSDK (1.7.1)
+  - FaceppSDK (2.0.0)
+  - Google-Mobile-Ads-SDK (7.8.1)
+  - UMengAnalytics (4.0.4)
+  - UMengSocialCOM (5.2.1)
+
+DEPENDENCIES:
+  - BmobSDK
+  - FaceppSDK
+  - Google-Mobile-Ads-SDK
+  - UMengAnalytics
+  - UMengSocialCOM (~> 5.2.1)
+
+SPEC CHECKSUMS:
+  BmobSDK: ebc3cb46b90d746f23121e9ea058a3122b85861f
+  FaceppSDK: c83bcadb7bbc512a3bb792f3cda407e14e0208b1
+  Google-Mobile-Ads-SDK: 3c2a6656117989469bfe7645640aa1de024a4c6c
+  UMengAnalytics: 4ed421fb3bca63b26fc13c947743cabf3831d199
+  UMengSocialCOM: 074c135ce349aa4c8848d3fb8458757bcb6ffb67
+
+PODFILE CHECKSUM: afe948428a30ad6a3d29324465acc6c4c227299c
+
+COCOAPODS: 1.0.1
