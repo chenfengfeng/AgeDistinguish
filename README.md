@@ -4,4 +4,5 @@
 ![](http://upload-images.jianshu.io/upload_images/294068-11b3748a6d775662.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 APP也有加入admob,也就是谷歌的广告,收益在前期算是比较客观的,毕竟之前并没有多少做这个,算是钻了个空吧~!哈哈~
 APP的思想很简单,就只是单独的检测年龄性别等属性,没有所谓的用户系统之分,毕竟觉得一个纯娱乐的APP不应该有太多的复杂的东西存在,下面是这个APP目前的效果图
+
 ![](http://upload-images.jianshu.io/upload_images/294068-ed349725eb77e816.gif?imageMogr2/auto-orient/strip)
