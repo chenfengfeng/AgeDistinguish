@@ -7,10 +7,10 @@
 //
 
 #import "FFTextView.h"
-#import <AudioToolbox/AudioToolbox.h>
+//#import <AudioToolbox/AudioToolbox.h>
 
 static FFTextView *_share;
-static SystemSoundID soundID = 0;
+//static SystemSoundID soundID = 0;
 @implementation FFTextView
 
 -(NSMutableString *)contentText
@@ -23,19 +23,19 @@ static SystemSoundID soundID = 0;
 
 -(void)startPrint
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"typing" ofType:@"wav"];
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:path], &soundID);
-    [NSTimer scheduledTimerWithTimeInterval:0.1906 target:self selector:@selector(outPutWord:) userInfo:nil repeats:YES];
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"typing" ofType:@"wav"];
+//    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:path], &soundID);
+    [NSTimer scheduledTimerWithTimeInterval:0.07 target:self selector:@selector(outPutWord:) userInfo:nil repeats:YES];
 }
 
 -(void)continuePrint
 {
-    [NSTimer scheduledTimerWithTimeInterval:0.1906 target:self selector:@selector(continuePutWord:) userInfo:nil repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:0.07 target:self selector:@selector(continuePutWord:) userInfo:nil repeats:YES];
 }
 
 -(void)outPutSound:(id)atimer
 {
-    AudioServicesPlaySystemSound (soundID);
+//    AudioServicesPlaySystemSound (soundID);
 }
 
 -(void)outPutWord:(id)atimer
@@ -48,7 +48,7 @@ static SystemSoundID soundID = 0;
         }
     }else{
         self.currentIndex++;
-        AudioServicesPlaySystemSound (soundID);
+//        AudioServicesPlaySystemSound (soundID);
         NSString *str = [self.contentText substringWithRange:NSMakeRange(0, self.currentIndex)];
         str = [NSString stringWithFormat:@"%@_",str];
         self.text = str;
@@ -61,12 +61,12 @@ static SystemSoundID soundID = 0;
     if (self.contentText.length == self.currentIndex) {
         [atimer invalidate];
         atimer = nil;
-        AudioServicesPlaySystemSound (0);
+//        AudioServicesPlaySystemSound (0);
         NSString *str = self.text;
         self.text = [str substringWithRange:NSMakeRange(0, str.length-1)];
         self.finish();
     }else{
-        AudioServicesPlayAlertSound(soundID);
+//        AudioServicesPlayAlertSound(soundID);
         self.currentIndex++;
         NSString *str = [self.contentText substringWithRange:NSMakeRange(0, self.currentIndex)];
         str = [NSString stringWithFormat:@"%@_",str];
