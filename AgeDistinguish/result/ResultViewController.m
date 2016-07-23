@@ -106,7 +106,7 @@
     BmobQuery *bquery = [BmobQuery queryWithClassName:@"ranking"];
     [bquery whereKey:@"charm" greaterThan:[NSNumber numberWithInt:charm]];
     [bquery countObjectsInBackgroundWithBlock:^(int number,NSError  *error){
-        NSString *message = [NSString stringWithFormat:@"获取相关信息成功!\n性别:%@(%.2f%%)\n年龄:%d岁(±%d岁)\n种族:%@(%.2f%%)\n心情:%@\n欢乐值:%.2f\n魅力值:%.f\n当前排名:%d名\n信息获取完毕!",gender,genderconfidence,age,agerange,race,raceconfidence,mood,smiling,charm,number];
+        NSString *message = [NSString stringWithFormat:@"获取相关信息成功!\n性别:%@(%.2f%%)\n年龄:%d岁(±%d岁)\n种族:%@(%.2f%%)\n心情:%@\n欢乐值:%.2f\n魅力值:%.f\n当前排名:第%d名\n信息获取完毕!",gender,genderconfidence,age,agerange,race,raceconfidence,mood,smiling,charm,number+1];
         
         [self.content.contentText appendString:message];
         [self.content continuePrint];
